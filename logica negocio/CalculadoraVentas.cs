@@ -33,8 +33,24 @@ public class CalculadoraVentas
         {
             porcentajeDescuento = 15;
         }
-        
-    }
+            switch (tipoCliente)
+            {
+                case 'A': 
+                    porcentajeDescuento += 7;
+                    break;
+                case 'B': 
+                    porcentajeDescuento += 5;
+                    break;
+                default:
+                    break;
+            }
+
+            montoDescuento = (importeBruto * porcentajeDescuento) / 100;
+
+
+            importePago = importeBruto - montoDescuento;
+
+        }
 }
 
 }
