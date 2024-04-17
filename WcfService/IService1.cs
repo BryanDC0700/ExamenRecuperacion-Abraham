@@ -62,4 +62,5 @@ namespace WcfService
             out float importeBruto, out float porcentajeDescuento, out float montoDescuento, out float importePago);
     }
 
+
 }

@@ -42,7 +42,7 @@ public class CalculadoraVentas
                     porcentajeDescuento += 5;
                     break;
                 default:
-                    break;
+                    break;  
             }
 
             montoDescuento = (importeBruto * porcentajeDescuento) / 100;

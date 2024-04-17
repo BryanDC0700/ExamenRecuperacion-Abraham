@@ -42,7 +42,7 @@ namespace WcfService
 
             if (!ValidadorDatos.ValidarTipoRuta(tipoRuta))
                 throw new ArgumentException("Tipo de ruta no válido.");
-            CalculadoraVentas.CalcularMontosVenta(tipoCliente, cantidadPersonas, tipoRuta,
+            object value = CalculadoraVentas.CalcularMontosVenta(tipoCliente, cantidadPersonas, tipoRuta,
                 out importeBruto, out porcentajeDescuento, out montoDescuento, out importePago);
         }
     }

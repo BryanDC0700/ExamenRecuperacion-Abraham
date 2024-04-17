@@ -68,6 +68,7 @@ namespace ExamenRecuperacion_Abraham
             [OperationContract]
             void EjecutarProcedimientoAlmacenado();
         }
+
     }
     }
 }
