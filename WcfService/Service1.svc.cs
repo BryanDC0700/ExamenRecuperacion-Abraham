@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ExamenRecuperacion_Abraham;
+using logica_negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -29,5 +31,20 @@ namespace WcfService
             }
             return composite;
         }
+        public void CalcularMontosVenta(char tipoCliente, int cantidadPersonas, int tipoRuta,
+            out float importeBruto, out float porcentajeDescuento, out float montoDescuento, out float importePago)
+        {
+            if (!ValidadorDatos.ValidarTipoCliente(tipoCliente))
+                throw new ArgumentException("Tipo de cliente no válido.");
+
+            if (!ValidadorDatos.ValidarCantidadPersonas(cantidadPersonas))
+                throw new ArgumentException("Cantidad de personas no válida.");
+
+            if (!ValidadorDatos.ValidarTipoRuta(tipoRuta))
+                throw new ArgumentException("Tipo de ruta no válido.");
+            CalculadoraVentas.CalcularMontosVenta(tipoCliente, cantidadPersonas, tipoRuta,
+                out importeBruto, out porcentajeDescuento, out montoDescuento, out importePago);
+        }
     }
+
 }

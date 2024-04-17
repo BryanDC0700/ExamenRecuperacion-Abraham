@@ -47,11 +47,13 @@ namespace WcfService
     }
     public class ventas
     {
-        public string nombre { get; set; }
-        public string producto { get; set; }
-        public int cantidad { get; set; }
-        public int precio { get; set; }
-        public int total { get; set; }
+        public string tipoCliente { get; set; }
+        public int cantidadPersonas { get; set; }
+        public int tipoRuta { get; set; }
+        public float importeBruto { get; set; }
+        public float porcentajeDescuento { get; set; }
+        public float montoDescuento { get; set; }
+        public float importePago { get; set; }  
     }
     public interface IVentaService
     {

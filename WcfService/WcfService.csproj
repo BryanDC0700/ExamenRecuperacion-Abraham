@@ -82,6 +82,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExamenRecuperacion Abraham.csproj">
+      <Project>{c9b66e58-8efa-4152-b7ae-f34aed5cd18f}</Project>
+      <Name>ExamenRecuperacion Abraham</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\logica negocio\logica negocio.csproj">
+      <Project>{7962fa02-59ab-4012-b46f-cde80f82b528}</Project>
+      <Name>logica negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
