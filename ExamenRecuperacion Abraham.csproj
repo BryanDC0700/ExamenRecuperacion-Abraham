@@ -104,7 +104,6 @@
     <None Include="bdRutas.edmx.diagram">
       <DependentUpon>bdRutas.edmx</DependentUpon>
     </None>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
