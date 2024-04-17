@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamenRecuperacion Abraham"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\WcfService.csproj", "{FB828F91-D772-45EE-8D78-15D173949696}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logica negocio", "logica negocio\logica negocio.csproj", "{7962FA02-59AB-4012-B46F-CDE80F82B528}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FB828F91-D772-45EE-8D78-15D173949696}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB828F91-D772-45EE-8D78-15D173949696}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB828F91-D772-45EE-8D78-15D173949696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7962FA02-59AB-4012-B46F-CDE80F82B528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7962FA02-59AB-4012-B46F-CDE80F82B528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7962FA02-59AB-4012-B46F-CDE80F82B528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7962FA02-59AB-4012-B46F-CDE80F82B528}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
