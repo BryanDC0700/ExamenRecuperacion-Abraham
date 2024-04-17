@@ -4,15 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.ServiceModel;
 namespace ExamenRecuperacion_Abraham
 {
     public partial class Form1 : Form
     {
-        VentaServiceClient client = new VentaServiceClient()
+        VentaServiceClient client = new VentaServiceClient();
         public Form1()
         {
             InitializeComponent();
@@ -56,10 +57,16 @@ namespace ExamenRecuperacion_Abraham
             }
         }
 
-        // Cerrar el cliente al cerrar el formulario para liberar recursos
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             client.Close();
+        }
+
+        [ServiceContract]
+        public interface IVentaService
+        {
+            [OperationContract]
+            void EjecutarProcedimientoAlmacenado();
         }
     }
     }
