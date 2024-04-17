@@ -39,7 +39,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImportePago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbxImporteBruto = new System.Windows.Forms.TextBox();
+            this.tbxPorcentajeDescuento = new System.Windows.Forms.TextBox();
+            this.tbxMontoDescuento = new System.Windows.Forms.TextBox();
+            this.tbxImportePago = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -136,7 +146,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(805, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(511, 308);
             this.dataGridView1.TabIndex = 8;
             // 
             // Cliente
@@ -153,11 +163,93 @@
             this.ImportePago.Name = "ImportePago";
             this.ImportePago.Width = 125;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tbxImportePago);
+            this.groupBox1.Controls.Add(this.tbxMontoDescuento);
+            this.groupBox1.Controls.Add(this.tbxPorcentajeDescuento);
+            this.groupBox1.Controls.Add(this.tbxImporteBruto);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(586, 219);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(296, 308);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Resultados:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Importe Bruto:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 69);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(143, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Porcentaje Descuento:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 106);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 16);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Monto Descuento:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 145);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Importe Pago:";
+            // 
+            // tbxImporteBruto
+            // 
+            this.tbxImporteBruto.Location = new System.Drawing.Point(179, 34);
+            this.tbxImporteBruto.Name = "tbxImporteBruto";
+            this.tbxImporteBruto.Size = new System.Drawing.Size(100, 22);
+            this.tbxImporteBruto.TabIndex = 4;
+            // 
+            // tbxPorcentajeDescuento
+            // 
+            this.tbxPorcentajeDescuento.Location = new System.Drawing.Point(179, 69);
+            this.tbxPorcentajeDescuento.Name = "tbxPorcentajeDescuento";
+            this.tbxPorcentajeDescuento.Size = new System.Drawing.Size(100, 22);
+            this.tbxPorcentajeDescuento.TabIndex = 5;
+            // 
+            // tbxMontoDescuento
+            // 
+            this.tbxMontoDescuento.Location = new System.Drawing.Point(179, 103);
+            this.tbxMontoDescuento.Name = "tbxMontoDescuento";
+            this.tbxMontoDescuento.Size = new System.Drawing.Size(100, 22);
+            this.tbxMontoDescuento.TabIndex = 6;
+            // 
+            // tbxImportePago
+            // 
+            this.tbxImportePago.Location = new System.Drawing.Point(179, 142);
+            this.tbxImportePago.Name = "tbxImportePago";
+            this.tbxImportePago.Size = new System.Drawing.Size(100, 22);
+            this.tbxImportePago.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 570);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cbxTipoRuta);
@@ -170,6 +262,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +282,15 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportePago;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tbxImportePago;
+        private System.Windows.Forms.TextBox tbxMontoDescuento;
+        private System.Windows.Forms.TextBox tbxPorcentajeDescuento;
+        private System.Windows.Forms.TextBox tbxImporteBruto;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
 

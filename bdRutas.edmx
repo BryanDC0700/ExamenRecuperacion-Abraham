@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="bdRutasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ventas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoCliente" Type="char" MaxLength="1" />
+          <Property Name="CantidadPersonas" Type="int" />
+          <Property Name="TipoRuta" Type="int" />
+          <Property Name="ImporteBruto" Type="float" />
+          <Property Name="PorcentajeDescuento" Type="float" />
+          <Property Name="MontoDescuento" Type="float" />
+          <Property Name="ImportePago" Type="float" />
+        </EntityType>
+        <Function Name="CalcularMontosVenta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TipoCliente" Type="char" Mode="In" />
+          <Parameter Name="CantidadPersonas" Type="int" Mode="In" />
+          <Parameter Name="TipoRuta" Type="int" Mode="In" />
+          <Parameter Name="ImporteBruto" Type="float" Mode="InOut" />
+          <Parameter Name="PorcentajeDescuento" Type="float" Mode="InOut" />
+          <Parameter Name="MontoDescuento" Type="float" Mode="InOut" />
+          <Parameter Name="ImportePago" Type="float" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="bdRutasModelStoreContainer">
+          <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bdRutasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Ventas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoCliente" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CantidadPersonas" Type="Int32" />
+          <Property Name="TipoRuta" Type="Int32" />
+          <Property Name="ImporteBruto" Type="Double" />
+          <Property Name="PorcentajeDescuento" Type="Double" />
+          <Property Name="MontoDescuento" Type="Double" />
+          <Property Name="ImportePago" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="bdRutas" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ventas" EntityType="Self.Ventas" />
+          <FunctionImport Name="CalcularMontosVenta">
+            <Parameter Name="TipoCliente" Mode="In" Type="String" />
+            <Parameter Name="CantidadPersonas" Mode="In" Type="Int32" />
+            <Parameter Name="TipoRuta" Mode="In" Type="Int32" />
+            <Parameter Name="ImporteBruto" Mode="InOut" Type="Double" />
+            <Parameter Name="PorcentajeDescuento" Mode="InOut" Type="Double" />
+            <Parameter Name="MontoDescuento" Mode="InOut" Type="Double" />
+            <Parameter Name="ImportePago" Mode="InOut" Type="Double" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bdRutasModelStoreContainer" CdmEntityContainer="bdRutas">
+          <EntitySetMapping Name="Ventas">
+            <EntityTypeMapping TypeName="bdRutasModel.Ventas">
+              <MappingFragment StoreEntitySet="Ventas">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TipoCliente" ColumnName="TipoCliente" />
+                <ScalarProperty Name="CantidadPersonas" ColumnName="CantidadPersonas" />
+                <ScalarProperty Name="TipoRuta" ColumnName="TipoRuta" />
+                <ScalarProperty Name="ImporteBruto" ColumnName="ImporteBruto" />
+                <ScalarProperty Name="PorcentajeDescuento" ColumnName="PorcentajeDescuento" />
+                <ScalarProperty Name="MontoDescuento" ColumnName="MontoDescuento" />
+                <ScalarProperty Name="ImportePago" ColumnName="ImportePago" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CalcularMontosVenta" FunctionName="bdRutasModel.Store.CalcularMontosVenta" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
