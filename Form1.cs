@@ -16,5 +16,25 @@ namespace ExamenRecuperacion_Abraham
         {
             InitializeComponent();
         }
+
+        private void cbxTipoCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxCantidadPersonas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxTipoRuta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

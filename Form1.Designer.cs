@@ -36,6 +36,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbxTipoRuta = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImportePago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,6 +73,7 @@
             this.cbxTipoCliente.Name = "cbxTipoCliente";
             this.cbxTipoCliente.Size = new System.Drawing.Size(202, 24);
             this.cbxTipoCliente.TabIndex = 2;
+            this.cbxTipoCliente.SelectedIndexChanged += new System.EventHandler(this.cbxTipoCliente_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -86,6 +91,7 @@
             this.tbxCantidadPersonas.Name = "tbxCantidadPersonas";
             this.tbxCantidadPersonas.Size = new System.Drawing.Size(166, 22);
             this.tbxCantidadPersonas.TabIndex = 4;
+            this.tbxCantidadPersonas.TextChanged += new System.EventHandler(this.tbxCantidadPersonas_TextChanged);
             // 
             // label4
             // 
@@ -108,6 +114,7 @@
             this.cbxTipoRuta.Name = "cbxTipoRuta";
             this.cbxTipoRuta.Size = new System.Drawing.Size(408, 24);
             this.cbxTipoRuta.TabIndex = 6;
+            this.cbxTipoRuta.SelectedIndexChanged += new System.EventHandler(this.cbxTipoRuta_SelectedIndexChanged);
             // 
             // btnRegistrar
             // 
@@ -117,12 +124,41 @@
             this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cliente,
+            this.ImportePago});
+            this.dataGridView1.Location = new System.Drawing.Point(43, 219);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(805, 308);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.MinimumWidth = 6;
+            this.Cliente.Name = "Cliente";
+            this.Cliente.Width = 125;
+            // 
+            // ImportePago
+            // 
+            this.ImportePago.HeaderText = "ImportePago";
+            this.ImportePago.MinimumWidth = 6;
+            this.ImportePago.Name = "ImportePago";
+            this.ImportePago.Width = 125;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 570);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cbxTipoRuta);
             this.Controls.Add(this.label4);
@@ -133,6 +169,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +185,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxTipoRuta;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ImportePago;
     }
 }
 
